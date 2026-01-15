@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Dr. Jane Goodall</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #4caf50;
+            --primary-dark: #1b5e20;
+            --secondary-color: #ff9800;
+            --accent-color: #8bc34a;
+            --dark-color: #263238;
+            --light-color: #f5f5f5;
+            --text-color: #424242;
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.4s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 10rem;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1593069567131-53a0614dde1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 8px solid white;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+        }
+
+        /* Introduction Section */
+        .introduction {
+            background-color: white;
+        }
+
+        .intro-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .intro-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-highlight {
+            background-color: rgba(139, 195, 74, 0.2);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background-color: #f5f9f5;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .achievement-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-img {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .achievement-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .achievement-card:hover .achievement-img img {
+            transform: scale(1.1);
+        }
+
+        .achievement-content {
+            padding: 1.8rem;
+        }
+
+        .achievement-year {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Legacy Section */
+        .legacy {
+            background-color: white;
+        }
+
+        .legacy-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .legacy-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            order: 2;
+        }
+
+        .legacy-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .legacy-content {
+            order: 1;
+        }
+
+        .legacy-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #f5f9f5;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-top: 0.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: #f5f9f5;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Quotes Section */
+        .quotes {
+            background-color: white;
+        }
+
+        .quotes-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .quote-item {
+            background-color: #f5f9f5;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.9)), 
+                        url('https://images.unsplash.com/photo-1583339522870-0d9f28cef33f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .cta h2, .cta p {
+            color: white;
+        }
+
+        .cta h2:after {
+            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .cta .btn {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .cta .btn:hover {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta .btn-outline {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-about p {
+            color: #b0bec5;
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b0bec5;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: #b0bec5;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0bec5;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-container,
+            .intro-container,
+            .legacy-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero {
+                padding-top: 8rem;
+                min-height: auto;
+            }
+            
+            .legacy-image {
+                order: 1;
+            }
+            
+            .legacy-content {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .cta-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-badge {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: 1.5rem;
+                display: inline-block;
+            }
+            
+            .legacy-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .legacy-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-item {
+                padding: 2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Animation for elements */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-leaf"></i> Jane Goodall
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#legacy">Legacy</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <h1>Dr. Jane Goodall</h1>
+                <div class="hero-subtitle">Primatologist • Anthropologist • Conservationist</div>
+                <p>Renowned for her groundbreaking work with chimpanzees and her tireless advocacy for animal welfare and environmental conservation. Her revolutionary research transformed our understanding of primates and redefined the relationship between humans and animals.</p>
+                
+                <div class="hero-quote">
+                    "What you do makes a difference, and you have to decide what kind of difference you want to make."
+                </div>
+                
+                <a href="#introduction" class="btn">Explore Her Journey</a>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=962&q=80" alt="Dr. Jane Goodall" class="hero-img">
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i> UN Messenger of Peace
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="introduction">
+        <div class="container intro-container">
+            <div class="intro-image fade-in">
+                <img src="https://images.unsplash.com/photo-1579168765467-3b235f938439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Jane Goodall with chimpanzee">
+            </div>
+            <div class="intro-content fade-in">
+                <h2>The Woman Who Redefined Science</h2>
+                <p>Born in London in 1934, Jane Goodall developed a love for animals at an early age. At 26, she traveled to Tanzania to study chimpanzees in the wild, despite having no formal scientific training. Her patient, observant approach led to discoveries that challenged long-held scientific beliefs.</p>
+                <p>Goodall was the first to observe chimpanzees making and using tools, a capability previously thought to be uniquely human. She documented their complex social structures, emotional lives, and individual personalities, fundamentally changing how science views animals.</p>
+                
+                <div class="intro-highlight">
+                    <h3>Groundbreaking Discoveries</h3>
+                    <p>Goodall's research revealed that chimpanzees have personalities, form lasting family bonds, experience emotions like joy and grief, and engage in both cooperation and conflict. These findings blurred the lines between humans and other animals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Notable Achievements</h2>
+                <p>Key milestones in Jane Goodall's extraordinary career and advocacy work</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in">
+                    <div class="achievement-img">
+                        <img src="https://images.unsplash.com/photo-1543946602-59c20f6b0c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Gombe Stream National Park">
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-year">1960</div>
+                        <h3>Gombe Research Begins</h3>
+                        <p>Began her landmark study of chimpanzees in Gombe Stream National Park, Tanzania. This became the longest continuous study of any wild animal group in the world.</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card fade-in">
+                    <div class="achievement-img">
+                        <img src="https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80" alt="Jane Goodall Institute">
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-year">1977</div>
+                        <h3>Jane Goodall Institute</h3>
+                        <p>Founded the Jane Goodall Institute to advance wildlife research, conservation, and environmental education, with a focus on community-centered conservation programs.</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card fade-in">
+                    <div class="achievement-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Roots & Shoots Program">
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-year">1991</div>
+                        <h3>Roots & Shoots Program</h3>
+                        <p>Launched Roots & Shoots, a global youth service program that empowers young people to make positive change in their communities for people, animals, and the environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legacy" class="legacy">
+        <div class="container legacy-container">
+            <div class="legacy-content fade-in">
+                <h2>Enduring Legacy</h2>
+                <p>Jane Goodall's impact extends far beyond primatology. She has become one of the world's most influential conservationists and a powerful voice for hope in a time of environmental crisis.</p>
+                <p>Through her institute and Roots & Shoots program, she has inspired millions to take action for a better world. Her message emphasizes that every individual can make a difference through daily choices and collective action.</p>
+                
+                <div class="legacy-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">60+</div>
+                        <div class="stat-label">Years of Research</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Countries Reached</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Youth Empowered</div>
+                    </div>
+                </div>
+            </div>
+            <div class="legacy-image fade-in">
+                <img src="https://images.unsplash.com/photo-1589652043056-ba1a2c4830a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Jane Goodall speaking">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Inspiring Moments</h2>
+                <p>A visual journey through Jane Goodall's remarkable life and work</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1559253664-ca249d4608c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Young Jane Goodall">
+                    <div class="gallery-overlay">
+                        <h3>Early Fieldwork</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" alt="With chimpanzees">
+                    <div class="gallery-overlay">
+                        <h3>With Chimpanzee Friends</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1536152471326-6428c7ef6e14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Conservation work">
+                    <div class="gallery-overlay">
+                        <h3>Conservation Advocacy</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1544973810-7ecb7b56a2bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Inspiring youth">
+                    <div class="gallery-overlay">
+                        <h3>Inspiring Future Generations</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="quotes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Words of Wisdom</h2>
+                <p>Inspiring quotes that capture Jane Goodall's philosophy and vision</p>
+            </div>
+            
+            <div class="quotes-slider fade-in">
+                <div class="quote-item">
+                    <div class="quote-text">
+                        "The greatest danger to our future is apathy. We cannot expect governments or corporations to solve our problems. The change must come from us as individuals."
+                    </div>
+                    <div class="quote-author">— Dr. Jane Goodall</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Continue Her Legacy</h2>
+                <p>Learn more about Jane Goodall's work and how you can contribute to conservation efforts</p>
+            </div>
+            
+            <div class="cta-btns fade-in">
+                <a href="https://www.janegoodall.org/" target="_blank" class="btn">Visit Jane Goodall Institute</a>
+                <a href="https://www.rootsandshoots.org/" target="_blank" class="btn btn-outline">Join Roots & Shoots</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i> Jane Goodall
+                    </div>
+                    <p>A tribute to one of the most influential conservationists of our time, whose work continues to inspire millions around the world to protect our planet and its inhabitants.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#legacy">Legacy</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Learn More</h3>
+                    <p><i class="fas fa-globe"></i> janegoodall.org</p>
+                    <p><i class="fas fa-envelope"></i> info@janegoodall.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Global conservation initiatives</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Tribute Page &copy; 2023 | Created with admiration for Dr. Jane Goodall</p>
+                <p>This page is for educational and inspirational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Simple quote rotation
+        const quotes = [
+            {
+                text: "What you do makes a difference, and you have to decide what kind of difference you want to make.",
+                author: "Dr. Jane Goodall"
+            },
+            {
+                text: "The least I can do is speak out for those who cannot speak for themselves.",
+                author: "Dr. Jane Goodall"
+            },
+            {
+                text: "Only if we understand, can we care. Only if we care, will we help. Only if we help, shall all be saved.",
+                author: "Dr. Jane Goodall"
+            },
+            {
+                text: "Every individual matters. Every individual has a role to play. Every individual makes a difference.",
+                author: "Dr. Jane Goodall"
+            }
+        ];
+        
+        let currentQuoteIndex = 0;
+        const quoteText = document.querySelector('.quote-text');
+        const quoteAuthor = document.querySelector('.quote-author');
+        
+        // Rotate quotes every 8 seconds
+        setInterval(() => {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            quoteText.style.opacity = 0;
+            quoteAuthor.style.opacity = 0;
+            
+            setTimeout(() => {
+                quoteText.textContent = `"${quotes[currentQuoteIndex].text}"`;
+                quoteAuthor.textContent = `— ${quotes[currentQuoteIndex].author}`;
+                quoteText.style.opacity = 1;
+                quoteAuthor.style.opacity = 1;
+            }, 500);
+        }, 8000);
+    </script>
+</body>
+</html>
